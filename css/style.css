@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: hsl(225, 7%, 36%);
+}
+
+body {
+    height: 100vh;
+    background-image: url("../images/bg-top.svg"), url("../images/bg-bottom.svg");
+    background-position: top right, bottom left;
+    background-repeat: no-repeat, no-repeat;
+    background-color: #c6fff5;
+}
+
+/* HEAEDER */
+header h1 {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+header div.options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.8rem 0 3.4rem 0;
+}
+header div.options h4 {
+    font-size: 1rem;
+    color: hsla(225, 7%, 36%, 0.8);
+}
+
+header div label {
+    margin: 0 1rem;
+}
+
+
+
+/* MENU */
+menu {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+menu div {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    border: 1px solid white;
+    border-radius: 8px;
+    justify-content: center;
+    box-shadow: 0 0 20px hsla(243, 81%, 16%, 0.2);
+    background-color: white;
+
+    min-width: 330px;
+    min-height: 330px;
+}
+
+menu div h3 {
+    margin-top: 0.7rem;
+}
+
+.professional-plan {
+    background: linear-gradient(to bottom, #0ca6b7, #0ca6b7, #613483);
+    border: none;
+    color: white;
+}
+
+.professional-plan * {
+    color: white;
+}
+.professional-plan button {
+    color: hsl(225, 7%, 36%);
+}
+
+.basic-plan, .master-plan {
+    margin: 1rem 0;
+}
+
+.basic-plan {
+    border-right: none;
+}
+.master-plan {
+    border-left: none;
+}
+
+menu div h1 {
+    font-size: 4.7rem;
+    margin: 1rem 0 1.3rem 0;
+}
+
+.monthly {
+    display: none;
+}
+
+#dollar {
+    font-size: 3rem;
+}
+
+menu div p {
+    padding: 1rem 0;
+    border-top: 1px solid hsla(186, 88%, 43%, 0.5);
+}
+.bb {
+    border-bottom: 1px solid hsla(186, 88%, 43%, 0.5);
+}
+.professional-plan p {
+    padding: 1rem 0;
+    border-top: 1px solid hsla(0, 0%, 100%, 0.5);
+}
+.professional-plan .bb {
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.5);
+}
+
+
+menu div button {
+    margin: 2rem 0 1rem 0;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: hsl(274, 43%, 41%);
+    color: white;
+}
+menu div button:hover {
+    background-color: transparent;
+    color: #0dbbce;
+    transition: 400ms;
+}
+
+.professional-plan button {
+    background-color: white;
+    color: hsl(274, 43%, 41%);
+}
+.professional-plan button:hover {
+    background-color: transparent;
+    color: white;
+    transition: 400ms;
+}
+
+
+/* CHECKBOX */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+.slider-round {
+    position: absolute;
+    cursor: pointer;
+    background: linear-gradient(to bottom, hsl(186, 88%, 43%), hsl(186, 88%, 43%), hsl(274, 43%, 41%));
+    border-radius: 30px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: background-color 0.4s;
+}
+
+
+.slider-round:before {
+    content: "";
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    background-color: white;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    transition: transform 0.4s;
+}
+
+input:checked + .slider-round {
+    background: linear-gradient(to bottom, #0dbbce, hsl(186, 88%, 43%), hsl(274, 43%, 41%));
+}
+  
+input:checked + .slider-round:before {
+    transform: translateX(30px);
+}
